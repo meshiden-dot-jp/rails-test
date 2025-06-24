@@ -1,0 +1,23 @@
+<div id="<%= dom_id movie %>">
+  <p>
+    <strong>Title:</strong>
+    <%= movie.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= movie.description %>
+  </p>
+
+  <p>
+    <strong>Release date:</strong>
+    <%= movie.release_date %>
+  </p>
+
+  <p>
+    <strong>Review average:</strong>
+    <%= movie.reviews&.average(:points)&.round(2) %>
+    
+  </p>
+
+</div>

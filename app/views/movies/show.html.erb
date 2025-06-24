@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @movie %>
+
+<table>
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr><td><%= render review %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div>
+  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
+  <%= link_to "Back to movies", movies_path %> |
+  <%= link_to "Create new review", new_review_path(@review) %>
+
+  <%= button_to "Destroy this movie", @movie, method: :delete %>
+</div>

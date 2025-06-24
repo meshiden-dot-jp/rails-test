@@ -1,0 +1,29 @@
+<div id="<%= dom_id review %>">
+  <p>
+    <strong>Content:</strong>
+    <%= review.content %>
+  </p>
+
+  <p>
+    <strong>Movie:</strong>
+    <%= review.movie_id %>
+    <%= review.movie.title%>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= review.user_id %>
+    <%= review.user.email_address %>
+  </p>
+
+  <p>
+    <strong>Points:</strong>
+    <% review.points.times do %>
+      <%= "★" %>
+    <% end %>
+    <% (5 - review.points).times do %>
+      <%= "☆" %>
+    <% end %>
+  </p>
+
+</div>
